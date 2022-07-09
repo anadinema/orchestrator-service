@@ -3,9 +3,15 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.commerce.app</groupId>
-	<artifactId>orchestrator-api</artifactId>
+	<groupId>in.paatra.application</groupId>
+	<artifactId>orchestrator-service-parent</artifactId>
+	<packaging>pom</packaging>
 	<version>v.1.0.0</version>
+
+	<modules>
+		<module>orchestrator-commons</module>
+		<module>orchestrator-application</module>
+	</modules>
 
 	<properties>
 		<maven.compiler.source>11</maven.compiler.source>
@@ -15,6 +21,7 @@
 		<mysql.connector.version>8.0.29</mysql.connector.version>
 		<springboot.version>2.6.7</springboot.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -36,6 +43,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-artemis</artifactId>
 			<version>${springboot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-dependencies</artifactId>
+			<version>${springboot.version}</version>
+			<type>pom</type>
+			<scope>import</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

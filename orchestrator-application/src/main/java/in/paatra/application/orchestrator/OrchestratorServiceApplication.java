@@ -1,13 +1,13 @@
-package org.commerce.app.orchestrator;
+package in.paatra.application.orchestrator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class OrchestratorApiApplication {
+public class OrchestratorServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(OrchestratorApiApplication.class, args);
+		SpringApplication.run(OrchestratorServiceApplication.class, args);
 	}
 
 }
